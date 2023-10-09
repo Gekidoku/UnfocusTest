@@ -402,7 +402,7 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
     
-    <!-- Doenst work -->
+    <!-- Doesnt work -->
     <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
 
         <Setter Property="VisualStateManager.VisualStateGroups">
