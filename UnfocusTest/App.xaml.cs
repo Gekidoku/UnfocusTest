@@ -13,10 +13,10 @@
             base.OnResume();
 
             //Variant one
-            // MainPage = new AppShell();
+             MainPage = new AppShell();
 
             //Variant two
-            MainPage = new NavigationPage(new OnResumePlaceholderPage());
+            //MainPage = new NavigationPage(new OnResumePlaceholderPage());
 
             
             //Variant Three
