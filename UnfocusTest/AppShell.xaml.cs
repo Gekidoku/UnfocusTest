@@ -1,4 +1,5 @@
-﻿namespace UnfocusTest
+﻿
+namespace UnfocusTest
 {
     public partial class AppShell : Shell
     {
@@ -31,6 +32,18 @@
 
             });
             this.Items.Add(VMPage);
+            var MenuI = new MenuItem()
+            {
+                Text = "SetMainPage",
+               
+            };
+            MenuI.Clicked += MenuI_Clicked;
+            this.Items.Add(MenuI);
+        }
+
+        private void MenuI_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new OnResumePlaceholderPage());
         }
     }
 }

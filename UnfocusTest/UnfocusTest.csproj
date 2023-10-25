@@ -53,12 +53,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="OnResumePlaceholderPage.xaml.cs">
+	    <DependentUpon>OnResumePlaceholderPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="EditorWithVmPage.xaml.cs">
 	    <DependentUpon>EditorWithVmPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="OnResumePlaceholderPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="EditorWithVmPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

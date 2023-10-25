@@ -11,11 +11,8 @@
         protected override void OnResume()
         {
             base.OnResume();
-            LogoutUser();
+            MainPage = new AppShell();
         }
-        public static void LogoutUser()
-        {
-            App.Current.MainPage = new AppShell();
-        }
+       
     }
 }
