@@ -42,10 +42,10 @@ namespace UnfocusTest
             CollectionViewP.Items.Add(new ShellContent()
             {
                 Route = "CollectionViewPage",
-                ContentTemplate = new DataTemplate(typeof(MainPage)),
+                ContentTemplate = new DataTemplate(typeof(CollectionViewPage)),
 
             });
-            this.Items.Add(SplashPage);
+            this.Items.Add(CollectionViewP);
 
 
             var MenuI = new MenuItem()
