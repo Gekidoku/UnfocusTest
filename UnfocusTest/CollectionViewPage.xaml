@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnfocusTest.CollectionViewPage"
+             Title="CollectionViewPage">
+    
+
+    <CollectionView ItemsSource="{Binding Items}">
+        <CollectionView.ItemTemplate>
+
+            <DataTemplate x:DataType="x:String">
+
+                <VerticalStackLayout Padding="10">
+
+                    <Border StrokeShape="RoundRectangle 15"
+                            BackgroundColor="White"
+                            Padding="10">
+
+                        <Grid ColumnDefinitions="40,*" ColumnSpacing="10">
+
+                            <!-- Avatar -->
+                            <VerticalStackLayout VerticalOptions="Start"
+                                                    Spacing="5">
+
+                                <Image Source="dotnet_bot.png"
+                                       WidthRequest="40"
+                                       HeightRequest="40"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="Center" />
+
+                            </VerticalStackLayout>
+
+                            <!--Main content-->
+                            <VerticalStackLayout Grid.Column="1">
+
+                                <!--Username and date -->
+                                <Grid Margin="0,0,0,10">
+
+                                    <Label Text="Username"
+                                           FontFamily="OpenSansSemibold"
+                                           HorizontalOptions="Start"
+                                           />
+
+                                    <Label Text="today"
+                                           FontFamily="OpenSansSemibold"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="End" />
+
+                                </Grid>
+
+                                <!-- Text-->
+                                <Label Text="{Binding }" Margin="0,0,0,10"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </Border>
+
+                </VerticalStackLayout>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

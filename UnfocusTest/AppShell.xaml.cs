@@ -32,6 +32,22 @@ namespace UnfocusTest
 
             });
             this.Items.Add(VMPage);
+
+            var CollectionViewP = new FlyoutItem()
+            {
+                Title = "CollectionView",
+
+
+            };
+            CollectionViewP.Items.Add(new ShellContent()
+            {
+                Route = "CollectionViewPage",
+                ContentTemplate = new DataTemplate(typeof(MainPage)),
+
+            });
+            this.Items.Add(SplashPage);
+
+
             var MenuI = new MenuItem()
             {
                 Text = "SetMainPage",

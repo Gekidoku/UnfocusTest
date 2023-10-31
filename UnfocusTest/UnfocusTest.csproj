@@ -62,6 +62,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CollectionViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="OnResumePlaceholderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
