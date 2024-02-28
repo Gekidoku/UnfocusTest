@@ -1,4 +1,6 @@
 ﻿
+
+
 namespace UnfocusTest
 {
     public partial class AppShell : Shell
@@ -46,6 +48,16 @@ namespace UnfocusTest
 
             });
             this.Items.Add(CollectionViewP);
+
+            var webviewpage = new FlyoutItem(){
+                Title = "WebView in collectionpage",
+                
+            };
+            webviewpage.Items.Add(new ShellContent(){
+                Route ="WebVCol",
+                ContentTemplate = new DataTemplate(typeof(CollectionWebViewPage))
+            });
+            this.Items.Add(webviewpage);
 
 
             var MenuI = new MenuItem()
