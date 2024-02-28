@@ -9,7 +9,7 @@ public class MyCollectionViewModel : INotifyCollectionChanged
 
     public MyCollectionViewModel()
     {
-        var mylist = new List<MyCollectionModel>();
+        var mylist = new List<MyCollectionModel>(); 
         mylist.Add(new MyCollectionModel()
         {
             Header = "TestHeader",
