@@ -6,7 +6,9 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new OnResumePlaceholderPage());
+
+            //MainPage = new AppShell();
         }
         protected override void OnResume()
         {
