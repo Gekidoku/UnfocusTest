@@ -1,22 +1,29 @@
-﻿namespace UnfocusTest
+﻿
+namespace UnfocusTest
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+            
 
-            MainPage = new NavigationPage(new OnResumePlaceholderPage());
+            
+           
 
             //MainPage = new AppShell();
+        }
+        protected override Window CreateWindow(IActivationState activationState)
+        {
+             return new Window(new NavigationPage(new OnResumePlaceholderPage()));
         }
         protected override void OnResume()
         {
             base.OnResume();
 
             //Variant one
-             MainPage = new AppShell();
-
+            
+          
             //Variant two
             //MainPage = new NavigationPage(new OnResumePlaceholderPage());
 

@@ -403,28 +403,7 @@
     </Style>
     
     <!-- Doesnt work -->
-    <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
-
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource Gray200 }, Dark={StaticResource Gray600}}" />
-                            <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Gray950}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Selected">
-                        <VisualState.Setters>
-
-                            <Setter Property="Background" Value="{StaticResource MyRed}" />
-                            <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Gray100}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-    </Style>
+    
     
     <!--Works-->
     <!--<Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">

@@ -1,4 +1,6 @@
-﻿namespace UnfocusTest
+﻿using Microsoft.Maui.Controls.PlatformConfiguration;
+
+namespace UnfocusTest
 {
     public partial class OnResumePlaceholderPage : ContentPage
     {
@@ -14,13 +16,14 @@
             var MyLabel = new Label()
             {
                
-                Text = "Now bring the app to the background and then back to the foreground. You'll notice a crash on onresume"
+                Text = "I will now click the button. this switches the mainpage to a shell page. then i will press a flyoutitem and the app will freeze with no message in the terminal"
             };
              var MyButton = new Button(){
                 Text = "switchmain"
              };
              MyButton.Clicked += (sender, e) => {
                 App.Current.MainPage = new AppShell();
+                
              };
              var stack = new StackLayout();
              stack.Add(MyLabel);
