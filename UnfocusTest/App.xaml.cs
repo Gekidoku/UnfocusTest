@@ -15,7 +15,7 @@ namespace UnfocusTest
         }
         protected override Window CreateWindow(IActivationState activationState)
         {
-             return new Window(new NavigationPage(new OnResumePlaceholderPage()));
+             return new Window(new AppShell());
         }
         protected override void OnResume()
         {
