@@ -1,4 +1,6 @@
-﻿namespace UnfocusTest
+﻿using Syncfusion.Maui.Toolkit.TextInputLayout;
+
+namespace UnfocusTest
 {
     public partial class MainPage : ContentPage
     {
@@ -7,21 +9,49 @@
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = new MainViewModel();
             SetView();
+
         }
         public void SetView()
         {
-            var MyEditor = new Editor()
+            var teststack = new StackLayout()
+            {
+                Orientation = StackOrientation.Vertical
+            };
+
+            var wrapper = new SfTextInputLayout()
+            {
+                Hint = "Prijs",
+                HelperText = "Jouw prijs",
+                LeadingViewPosition= ViewPosition.Inside,
+                LeadingView = new Label() { Text = "💶",FontSize=20 },
+
+                
+            };
+
+            var MyEditor = new Entry()
             {
                
-                MaximumHeightRequest = 60
+               
+                Keyboard = Keyboard.Numeric,
+                
             };
+            MyEditor.SetBinding(Entry.TextProperty, "Price");
             MyEditor.Unfocused += MyEditor_Unfocused;
+            wrapper.Content = MyEditor;
+            teststack.Children.Add(wrapper);
+            var btn = new Button()
+            {
+                Text = "OK",
+            };
+            btn.SetBinding(Button.CommandProperty, "MyBreakPointCommand");
+            teststack.Children.Add(btn);
             var MyScroll = new ScrollView()
             {
                 Orientation = ScrollOrientation.Vertical
             };
-            MyScroll.Content = MyEditor; 
+            MyScroll.Content = teststack; 
             this.Content = MyScroll;
         }
 
