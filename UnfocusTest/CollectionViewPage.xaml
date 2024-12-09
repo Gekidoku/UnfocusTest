@@ -5,7 +5,12 @@
              Title="CollectionViewPage">
     
 
-    <CollectionView ItemsSource="{Binding Items}">
+    <CollectionView 
+        ItemsSource="{Binding Items}" 
+        ItemSizingStrategy="MeasureAllItems"
+        FlowDirection ="LeftToRight"
+
+        >
         <CollectionView.ItemTemplate>
 
             <DataTemplate x:DataType="x:String">
